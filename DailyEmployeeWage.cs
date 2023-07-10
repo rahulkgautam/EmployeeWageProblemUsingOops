@@ -20,7 +20,7 @@ namespace EmployeeWageProblemUsingOops
             int empHour = 0;
             int empWage = 0;
             Random random = new Random();
-            int empCheck = random.Next(2);
+            int empCheck = random.Next(3);
             if (empCheck == IS_FULL_TIME)
                 empHour = 8;
             else if (empCheck == IS_PART_TIME)
