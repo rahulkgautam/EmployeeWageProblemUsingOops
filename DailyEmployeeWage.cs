@@ -27,6 +27,12 @@ namespace EmployeeWageProblemUsingOops
                     empHour = 0;
                     break;
             }
+            if (empCheck == IS_FULL_TIME)
+                empHour = 8;
+            else if (empCheck == IS_PART_TIME)
+                empHour = 4;
+            else
+                empHour = 0;
             return empWage = empHour * EMP_RAT_PER_HOUR;
         }
     }
