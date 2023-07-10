@@ -9,10 +9,15 @@ namespace EmployeeWageProblemUsingOops
         const int EMP_RAT_PER_HOUR=20;
         const int IS_FULL_TIME=1;
         const int IS_PART_TIME=2;
+        const int NUM_OF_WORKING_DAY=20;
+        
         public int CalculateEmployeeDailyWage()
         {
             int empHour = 0;
             int empWage = 0;
+            int totalEmpWage = 0;
+            for (int day = 0; day < NUM_OF_WORKING_DAY; day++)
+            {
             Random random = new Random();
             int empCheck = random.Next(3);
             switch (empCheck)
@@ -26,14 +31,12 @@ namespace EmployeeWageProblemUsingOops
                 default:
                     empHour = 0;
                     break;
-            }
-            if (empCheck == IS_FULL_TIME)
-                empHour = 8;
-            else if (empCheck == IS_PART_TIME)
-                empHour = 4;
-            else
-                empHour = 0;
-            return empWage = empHour * EMP_RAT_PER_HOUR;
+            }            
+            empWage = empHour * EMP_RAT_PER_HOUR;
+            Console.WriteLine("Employee Wage :" + empWage);
+            totalEmpWage += empWage;
+        }
+        return totalEmpWage;
         }
     }
 }
