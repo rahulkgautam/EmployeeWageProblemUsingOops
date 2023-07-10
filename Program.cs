@@ -8,8 +8,11 @@ namespace EmployeeWageProblemUsingOops
         {
             Console.WriteLine("Welcome To Employee Wage Problem using oops");
             var employeeWage = new DailyEmployeeWage();
-            int empTotalWage =employeeWage.CalculateEmployeeDailyWage();
-            Console.WriteLine("Employee Total Wage "+ empTotalWage);
+            var totalEmp =employeeWage.CalculateEmployeeDailyWage();
+            Console.WriteLine("Total Working Days: " + totalEmp[0]);
+            Console.WriteLine("Total Working Hours: " + totalEmp[1]);
+            Console.WriteLine("Total Employee Wage : " + totalEmp[2]);
+
         }
     }
 }
